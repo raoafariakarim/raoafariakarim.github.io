@@ -110,7 +110,7 @@ body {
 .left-div img {
     width: 100%;
     max-width: 400px;
-    height: auto;
+    /* height: auto; */
     border-radius: 30%;
 }
 
@@ -132,8 +132,8 @@ button:hover {
 
 .rabbit-png {
     position: absolute;
-    top: 3em;
-    left: 60em;
+    top: 4em;
+    left: 65em;
 }
 
 .carrot-png {
