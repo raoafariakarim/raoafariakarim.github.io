@@ -74,12 +74,27 @@ body {
 .background-container {
     margin-top: 2em;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .university-background {
     flex: 1;
+    min-width: 200px;
     padding: 1em;
     margin-right: 1em;
+}
+
+@media (max-width: 600px) {
+    .box {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .box {
+        min-width: 48%; /* Two boxes per row on medium-sized screens */
+    }
 }
 
 .left-div {
