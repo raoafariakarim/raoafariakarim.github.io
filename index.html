@@ -6,6 +6,7 @@
     <title>Raoa Faria Karim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
@@ -19,6 +20,12 @@
         <p class="name">Raoa Faria Karim</p>
     </div>
     <div class="main-container">
+        <div class="rabbit-png">
+            <img src="images/rabbit-no-bg.png" alt="">
+        </div>
+        <div class="carrot-png">
+            <img src="images/carrot-no-bg.png" alt="">
+        </div>
         <div class="container" id="about">
             <div class="left-div">
                 <img src="images/image.jpg" alt="Your Image Description">
@@ -49,7 +56,9 @@
                 <div 
                 style="font-family: Georgia, 'Times New Roman', Times, serif; 
                        font-size: x-large; padding-top: 1em;">
-                    Download My CV
+                    <button>
+                        <p>Download My CV</p>
+                    </button>
                 </div>
             </div>
         </div>
@@ -123,31 +132,36 @@
             <div class="university-background"></div>
             <div class="university-background"></div>
         </div>
-        <div
-            style="display: inline-flex; background-color: #04AA6D; margin-top: 2em; padding: 0.5em;" id="contact">
-            Contact</div>
-            <div class="background-container">
-                <div class="university-background">
-                    <p>Email</p>
+            <div id="contact" style="text-align: center; font-size: x-large; color: #61aeed; font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                <p>Contact Me!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact">
+                    <a href="">
+                        <div>
+                            <img src="images/gmail.png" alt="" style="width: 70px; height: 70px;">
+                        </div>
+                    </a>
                 </div>
-                <div class="university-background">
-                    <p>LinkedIN</p>
+                <div class="contact">
+                    <a href="">
+                        <div>
+                            <img src="images/logo.png" alt="" style="width: 70px; height: 70px;">
+                        </div>
+                    </a>
                 </div>
-                <div class="university-background">
-                    <p>Github</p>
+                <div class="contact">
+                    <a href="">
+                        <div>
+                            <img src="images/linkedin.png" alt="" style="width: 60px; height: 60px;">
+                        </div>
+                    </a>
                 </div>
             </div>
+            <div class="footer" style="text-align: center; margin-top: 2em;">
+                <p>copyright@2023 - Raoa Faria Karim</p>
+            </div>
     </div>
-
-      <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>
 </body>
 </html>

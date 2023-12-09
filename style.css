@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 218);
   }
   
   .topnav {
@@ -64,7 +65,7 @@ body {
 .main-container {
     margin: 0 auto;
     max-width: 1000px;
-    padding-top: 2em;
+    margin-top: 2em;
 }
 
 .container {
@@ -116,3 +117,49 @@ body {
 img {
     pointer-events: none;
 }
+
+button {
+    background-color: rgb(255, 255, 218);
+    color: black;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+
+.rabbit-png {
+    position: absolute;
+    top: 3em;
+    left: 60em;
+}
+
+.carrot-png {
+    position: absolute;
+    top: 30em;
+    left: 65em;
+}
+
+.rabbit-png img {
+    height: 150px;
+    width: 150px;
+}
+
+.carrot-png img {
+    height: 150px;
+    width: 150px;
+}
+
+.contact-container {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact {
+    margin-right: 1em;
+}
+
