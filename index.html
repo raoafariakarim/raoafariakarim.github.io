@@ -3,164 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raoa Faria Karim</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="main.js"></script>
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .row-1 {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .intro {
+            flex: 2;
+        }
+
+        .profile-pic {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 15rem;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .row-2 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+
+        .projects {
+            border-radius: 10px;
+        }
+
+        .scroll-container {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 0 1rem;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 1rem;
+            /* margin-bottom: 1rem; */
+        }
+
+        .story {
+            display: flex;
+            font-size: 16px;
+            padding-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .row-1 {
+                flex-direction: column;
+            }
+
+            .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        .blink-text {
+          animation: blink 2s linear infinite;
+        }
+
+        a:visited {
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="#about" class="active">About</a>
-        <a href="#background">Background</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <p class="name">Raoa Faria Karim</p>
-    </div>
-    <div class="main-container">
-        <div class="rabbit-png">
-            <img src="images/rabbit-no-bg.png" alt="">
-        </div>
-        <div class="carrot-png">
-            <img src="images/carrot-no-bg.png" alt="">
-        </div>
-        <div class="container" id="about">
-            <div class="left-div">
-                <img src="images/image.jpg" alt="Your Image Description">
+<!--    <nav>-->
+<!--        <ul>-->
+<!--            <li><a href="#about">About</a></li>-->
+<!--            <li><a href="#research">Research</a></li>-->
+<!--            <li><a href="#projects">Projects</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+    <div class="container">
+        <div class="row-1">
+            <div class="intro">
+                <h1>Raoa Faria Karim</h1>
+                <p style="padding: 0.5rem 0; color: #949494"> [Will Add] </p>
+                <p style="padding-top: 1rem">Research Interests: [Will Add]</p>
+                <p style="padding-top: 1rem">Current Research: [Will Add]</p>
+                <p style="padding-top: 1rem">Skills: [Will Add]</p>
+                <div style="display: flex; padding-top: 1.5rem; justify-content: space-around">
+                  <p style="text-decoration: underline;"><a href="https://github.com/raoafariakarim" target="_blank">GitHub</a></p>
+                  <p style="text-decoration: underline"><a href="https://linkedin.com/in/raoa-faria-karim" target="_blank">LinkedIn</a></p>
+                  <p style="text-decoration: underline"><a href="resources/Resume.pdf" target="_blank">Resume</a></p>
+                </div>
+              <p class="blink-text" style="padding-top: 1.5rem; font-style: italic; color: #000fd3; font-weight: bold">Looking for Opportunities!</p>
             </div>
-            <div class="right-div">
-                <div 
-                style="font-family: Georgia, 'Times New Roman', Times, serif; 
-                       font-size: x-large;">
-                    Hi, I'm Raoa Faria Karim
-                </div>
-                <div
-                style="padding-top: 1em;
-                       font-family: Verdana, Geneva, Tahoma, sans-serif;
-                       line-height: 1.5em;">
-                    I graduated from University of Technology Malaysia (UTM) with a major in Computer Science, 
-                    specializing in Computer Networks & Security. Currently, I work as a Cloud Support Engineer 
-                    at Wavelet Solutions Sdn. Bhd. and have previous experiences as a Network Engineer Intern and 
-                    a Security Analyst Intern.
-                </div>
-                <div
-                style="font-family: Verdana, Geneva, Tahoma, sans-serif;
-                       padding-top: 1em; line-height: 1.5em;">
-                    I am driven to continue my education to further enhance my knowledge and expand my research 
-                    horizons. Pursuing a PhD in Computer Science will enable me to achieve this goal. I am eager 
-                    to embrace new challenges, collaborate with others professionally, and achieve my career goal 
-                    of becoming an exceptional researcher.
-                </div>
-                <div 
-                style="font-family: Georgia, 'Times New Roman', Times, serif; 
-                       font-size: x-large; padding-top: 1em;">
-                    <a href="resources/CV_Raoa Faria Karim.pdf" style="text-decoration: none;" target="_blank">
-                        <p>Download My CV</p>
-                    </a>
-                </div>
+            <div class="profile-pic">
+                <img src="images/image.jpg" alt="Profile Picture">
             </div>
         </div>
 
-        <div
-            style="display: inline-flex; background-color: #04AA6D; margin-top: 2em; padding: 0.5em;" id="background">
-            Education Background</div>
-        <div class="background-container">
-            <div class="university-background" style="border: 1px solid #9f04aa; box-shadow: 5px 10px #9f04aa; ">
-                Bachelor of Science (Computer Networks & Security) <br>
-                University of Technology Malaysia <br>
-                CGPA : 3.39/4.00
+        <div class="row-2">
+            <div class="projects">
+              <h2>What's happening?</h2>
+              <hr>
+              <div class="scroll-container">
+                <div class="story">
+                  <p style="font-weight: bold">04/12/2024:</p>
+                  <p style="padding-left: 0.2rem; font-size: 15px">Add Story.</p>
+                </div>
+                <div class="story">
+                  <p style="font-weight: bold">01/09/2024:</p>
+                  <p style="padding-left: 0.2rem; font-size: 15px">Add Story.</p>
+                </div>
+                <div class="story">
+                  <p style="font-weight: bold">11/07/2024:</p>
+                  <p style="padding-left: 0.2rem; font-size: 15px">Add Story.</p>
+                </div>
+              </div>
             </div>
-            <div class="university-background" style="border: 1px solid #9f04aa; box-shadow: 5px 10px #9f04aa; ">
-                Higher Secondary Certificate <br>
-                Govt. Hazi Mohammad Mohsin College, Chattogram, Bangladesh <br>
-                GPA: 4.83/5.00 
+            <div class="projects">
+                <h2>Research Papers</h2>
+                <hr>
+                <!-- <div class="project-card">
+                    <h3>Training Adaptive Foraging Behavior for Robot Swarms Using Distributed Neuroevolution of Augmented Topologies</h3>
+                    <div style="display: flex; padding-top: 0.5rem">
+                        <p style="font-style: italic; color: #7b7379"><u>Tameem Uz Zaman</u>, Pigar Biteng, Eric Rodriguez and Qi Lu</p>
+                        <p style="padding-left: 0.5rem; font-size: 14px">| AAAI 2025 [Acceptance Rate 23.4%]</p>
+                    </div>
+                    <div style="font-size: 15px; display: flex; width: 20%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/MARSLab-UTRGV/neatfa-tameem/tree/Fuel-Efficiency-Model" target="_blank">Code</a></p>
+                        <p><a href="https://drive.google.com/file/d/1bDEvyyeoSlofx4j38e_MfDhX4jVSmqbk/view?usp=sharing" target="_blank">Paper</a></p>
+                        <p><a href="https://drive.google.com/file/d/11CB_vWM2RVbA2SlVbbLPHvbOd6ui79RE/view?usp=sharing" target="_blank">Poster</a></p>
+                    </div>
+                </div> -->
             </div>
-            <div class="university-background" style="border: 1px solid #9f04aa; box-shadow: 5px 10px #9f04aa; ">
-                Secondary School Certificate <br>
-                Ispahani Public School and College, Chattogram, Bangladesh <br>
-                GPA: 5.00/5.00 
+            <div class="projects">
+                <h2>Personal Projects</h2>
+                <hr>
+                <!-- <div class="project-card">
+                    <h3>Medical Image Segmentation on COVID CT Scans using UNet</h3>
+                    <p style="padding: 0.5rem 0; color: #666">Implemented and evaluated an UNet model on COVID CT Scan images. Implemented a Dice Score Evaluation to get the best segmentation model. Leveraged PyTorch's automatic mixed precision method to speed up training and reduce GPU memory usage. Performed 5-Fold Cross Validation which provides reliable model performance.</p>
+                    <div style="font-size: 15px; display: flex; width: 15%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/Tameem786/Image_Seg_Covid_CT_Scans" target="_blank">Code</a></p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="projects">
+                <h2>Photo Gallery</h2>
+                <hr>
+                Working on it!
             </div>
         </div>
-
-        <div
-            style="display: inline-flex; background-color: #04AA6D; margin-top: 2em; padding: 0.5em;" id="experience">
-            Experience</div>
-        <div class="background-container">
-            <div class="university-background" style="border: 1px solid #045faa; box-shadow: 5px 10px #045faa; ">
-                <p style="font-size: larger; font-weight: bold;">Cloud Support Engineer</p>
-                <p>Wavelet Solutions Sdn Bdn  Kuala Lumpur, Malaysia </p>
-                <ul>
-                    <li>Providing Technical Support for AWS environment.</li>
-                    <li>Working with the ERP (Enterprise Resource Planning) and MIS (Management Information Systems) Team.</li>
-                    <li>Doing Incident Management & Infrastructure Management</li>
-                    <li>Troubleshooting and Debugging.</li>
-                </ul>
-            </div>
-            <div class="university-background" style="border: 1px solid #045faa; box-shadow: 5px 10px #045faa; ">
-                <p style="font-size: larger; font-weight: bold;">SECURITY ANALYST INTERN</p>
-                <p>Firmus Sdn Bhd, Kuala Lumpur, Malaysia</p>
-                <ul>
-                    <li>Carried out Network Penetration Testing using Nmap tool.</li>
-                    <li>Performed Web application Penetration Testing using tools like Nessus, burp suit and Mobile Penetration Testing.</li>
-                    <li>Wrote detailed reports on vulnerability assessment & researching on security services.</li>
-                </ul>
-            </div>
-            <div class="university-background" style="border: 1px solid #045faa; box-shadow: 5px 10px #045faa; ">
-                <p style="font-size: larger; font-weight: bold;">Network Engineer Intern</p>
-                <p>Dotlines Sdn Bhd, Kuala Lumpur,Malaysia</p>
-                <ul>
-                    <li>Created iptables using Bash Scripting for Blacklisting/ Whitelisting.</li>
-                    <li>Packet Capturing and Analysis, DNS web filtering.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="background-container">
-            <div class="university-background" style="border: 1px solid #045faa; box-shadow: 5px 10px #045faa; ">
-                <p style="font-size: larger; font-weight: bold;">RESEARCH ASSISTANT</p>
-                <p>Final Year Project Lab, UTM, Johor</p>
-                <ul>
-                    <li>Worked under Dr. Johan Bin Mohamad Sharif.</li>
-                    <li>Assisted fellow students in developing their projects under his guidance.</li>
-                    <li>Explored Moving Target Defense (MTD) and Deception techniques.</li>
-                    <li>Developed a project on ad hoc networks, showcasing exceptional research skills.</li>
-                    <li>Assisted juniors in formatting reports using Latex software.</li>
-                </ul>
-            </div>
-            <div class="university-background"></div>
-            <div class="university-background"></div>
-        </div>
-            <div id="contact" style="text-align: center; font-size: x-large; color: #61aeed; font-weight: bolder;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                <p>Contact Me!</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact">
-                    <a href="mailto:raoafariakarim20@gmail.com">
-                        <div>
-                            <img src="images/gmail.png" alt="" style="width: 70px; height: 70px;">
-                        </div>
-                    </a>
-                </div>
-                <div class="contact">
-                    <a href="https://github.com/raoafariakarim">
-                        <div>
-                            <img src="images/logo.png" alt="" style="width: 70px; height: 70px;">
-                        </div>
-                    </a>
-                </div>
-                <div class="contact">
-                    <a href="https://linkedin.com/in/raoa-faria-karim">
-                        <div>
-                            <img src="images/linkedin.png" alt="" style="width: 60px; height: 60px;">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="footer" style="text-align: center; margin-top: 2em;">
-                <p>copyright@2023 - Raoa Faria Karim</p>
-            </div>
     </div>
 </body>
 </html>
